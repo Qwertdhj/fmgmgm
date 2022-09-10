@@ -1,0 +1,1554 @@
+*
+{
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+a 
+{
+    text-decoration: none;
+}
+.modal {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(0 0 0 / 83%); /* цвет фона */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+	  pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+.close:hover
+{
+    transform: rotateZ(360deg);
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+      max-width: 500px;
+
+  }
+}
+/* свойства для блока, содержащего контент модального окна */ 
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    border-radius: 20px;
+    outline: 0;
+}
+@media (min-width: 768px) {
+  .modal-content {
+    border-radius: 20px;
+    width: 990px;
+    left: 180px;
+    height: 595px;
+  }
+}
+.play
+{
+    font-size: 64px;
+    border: none;
+    background: none;
+    color: red;
+    left: 1071px;
+    transition: 0.3s;
+    z-index: 99;
+    top: 460px;
+    position:absolute;
+}
+.play:hover
+{
+    transform: scale(1.2);
+}
+/* свойства для заголовка модального окна */
+.modal-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    background: #141414;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px;    
+    border-radius: 15px 15px 0 0;
+}
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    background: #141414;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    transition: 0.3s;
+    font-weight: 700;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus, .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+  position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    background: #141414;
+    border-radius: 0 0 15px 15px;
+    overflow: auto;
+}
+body
+{
+    background: #141414;
+}
+.line
+{
+    border: 1px solid #434343;
+    transform: rotate(270deg);
+    position: fixed;
+    width: 100%;
+    left: -420px;
+}
+.logo_1
+{
+    width: 58px;
+    left: 700px;
+    height: 57px;
+    border-radius: 100px;
+    background: red;
+    position: fixed;
+    top: 10px;
+    z-index: 9999;
+    left: 648px;
+    top: 31px;
+}
+.logo_2
+{
+    width: 58px;
+    height: 57px;
+    border-radius: 100px;
+    position: fixed;
+    left: 680px;
+    z-index: 9999;
+    top: 15px;
+    background: red;
+}
+.logo_3
+{
+    width: 58px;
+    height: 57px;
+    border-radius: 100px;
+    background: red;
+    left: 680px;
+    z-index: 9999;
+    top: 45px;
+    position: fixed;
+}
+.logo_4
+{
+    width: 58px;
+    height: 57px;
+    border-radius: 100px;
+    z-index: 9999;
+    background: red;
+    left: 718px;
+    top: 23px;
+    position: fixed;
+}
+.logo_name
+{
+    font-size: 48px;
+    color: white;
+    LEFT: 688px;
+    z-index: 9999;
+    font-family: 'K2D';
+    position: fixed;
+    top: 16px;
+}
+.linee
+{
+    border: 1px solid #434343;
+    transform: rotate(270deg);
+    position: fixed;
+    width: 100%;
+    left: -420px;
+}
+.logoo_1
+{
+    width: 58px;
+    left: 700px;
+    height: 57px;
+    border-radius: 100px;
+    background: red;
+    position: absolute;
+    z-index: 9999;
+    left: 362px;
+    top: 3500px;
+}
+.logoo_2
+{
+    width: 58px;
+    left: 700px;
+    height: 57px;
+    border-radius: 100px;
+    background: red;
+    position: absolute;
+    z-index: 9999;
+    left: 392px;
+    top: 3485px;
+}
+.logoo_3
+{
+    width: 58px;
+    left: 700px;
+    height: 57px;
+    border-radius: 100px;
+    background: red;
+    position: absolute;
+    z-index: 9999;
+    left: 392px;
+    top: 3515px;
+}
+.logoo_4
+{
+    width: 58px;
+    left: 700px;
+    height: 57px;
+    border-radius: 100px;
+    background: red;
+    position: absolute;
+    z-index: 9999;
+    left: 425px;
+    top: 3495px;
+}
+.logoo_name
+{
+    font-size: 48px;
+    color: white;
+    LEFT: 400px;
+    z-index: 9999;
+    font-family: 'K2D';
+    position: absolute;
+    top: 3485px;
+}
+.re
+{
+    font-size: 48px;
+    color: white;
+    LEFT: 605px;
+    z-index: 9999;
+    font-family: 'K2D';
+    position: absolute;
+    top: 3485px;  
+}
+.blaxc p
+{
+    color: white;
+    font-size: 18px;
+    font-family: 'K2D';
+    width: 90%;
+    font-weight: 500;
+    transition: 0.3s;
+    text-align: center;
+    top: 10px;
+    position: relative;
+}
+.vk
+{
+    font-size: 30px;
+    color: white;
+    margin-left: 885px;
+    transition: 0.3s;
+    margin-top: 3647px;
+    position: absolute;
+}
+.inst
+{
+    font-size: 30px;
+    position: absolute;
+    color: white;
+    margin-left: 925px;
+    margin-top: 3647px;
+    transition: 0.3s;
+}
+
+.rrre
+{
+    margin-left: 30px;
+    position: absolute;
+}
+.facebook
+{
+    font-size: 30px;
+    position: absolute;
+    color: white;
+    transition: 0.3s;
+    margin-left: 965px;
+    margin-top: 3647px;
+}
+.twitter
+{
+    font-size: 30px;
+    position: absolute;
+    color: white;
+    transition: 0.3s;
+    margin-left: 1005px;
+    margin-top: 3647px;
+}
+.twitter:hover,
+.facebook:hover,
+.inst:hover,
+.vk:hover {
+    transform: scale(1.2);
+    color: red;
+}
+.blaxc ion-icon
+{
+    margin-left: 184px;
+    font-size: 23px;
+    position: absolute;
+    top: 2px;
+}
+.blaxc p:hover
+{
+    transform: scale(1.1);
+}
+.blaxc
+{
+    width: 230px;
+    height: 47px;
+    background: #141414;
+    border-radius:10px ;
+    z-index: 999;
+    position: absolute;
+    margin-top: 3580px;
+    margin-left: 878px;
+}
+.blaxc2
+{
+    width: 235px;
+    position: absolute;
+    border-radius: 10px;
+    height: 51px;
+    background: red;
+    margin-top: 3578px;
+    margin-left: 875px;
+}
+.re2
+{
+    font-size: 48px;
+    color: white;
+    LEFT: 895px;
+    z-index: 9999;
+    font-family: 'K2D';
+    position: absolute;
+    top: 3485px;  
+}
+.logoo_name2
+{
+    font-size: 15px;
+    color: white;
+    LEFT: 400px;
+    z-index: 9999;
+    font-family: 'K2D';
+    position: absolute;
+    top: 3535px;
+}
+.user
+{
+    position: fixed;
+    transition: 0.3s;
+    color: white;
+    font-size: 32px;
+    top: 20px;
+    z-index: 9999;
+    left: 94%;
+}
+.coc
+{
+    position: fixed;
+    z-index: 9999;
+    transition: 0.3s;
+    color: white;
+    font-size: 32px;
+    top: 20px;
+    left: 90%;
+}
+.container {
+    margin-left: 44px;
+    margin-top: 135px;
+    width: 30%;
+}
+
+.wrapper {
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 3px rgb(0 0 0 / 15%);
+    position: fixed;
+    background: #0E0E0E;
+    z-index: 9;
+    width: 13%;
+    left: 15px;
+    top: 35px;
+}
+
+input {
+  width:100%;
+  border: none;
+  height: 50px;
+  border-radius: 5px;
+  padding: 0px 40px 0px 10px;
+  font-size: 18px;
+  background: 
+  #333340;
+  color: white;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+}
+
+input:focus {
+  outline: none;
+}
+
+
+button:focus {
+  outline: none;
+}
+
+button i {
+  width: 100%;
+  color: #6d7b98;
+  line-height: 50px;
+  font-size: 22px;
+}
+
+.results {
+  padding: 0px;
+}
+.element::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  /*Убрать полосу прокрутки для всей страницы*/
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+.results ul {
+    margin: 0;
+     padding: 0;
+        
+    }
+.results ul li {
+  list-style: none;
+  border-radius: 3px;
+  opacity: 0;
+  display: none;
+  padding: 8px 12px;
+  transition: all .1s linear;
+}
+
+.show .results ul li {
+  opacity: 1;
+  display: block;
+  height: 65px;
+  background: #0E0E0E;
+}
+
+.show .results {
+    padding: 10px;
+    width: 207px;
+    background: #0E0E0E;
+    border-radius: 0 0 10px 10px;
+    max-height: 500px;
+    overflow: overlay;
+}
+.results p
+{
+    margin-left: 57px;
+    margin-bottom: 78px;
+    margin-top: -55px;
+    color: white;
+    text-decoration: none;
+}
+.results img
+{
+    width: 40px;
+    border-radius: 3px;
+}
+
+.results ul li:hover {
+  background: #1f1f1f;
+}
+
+.blax_1
+{
+    width: 930px;
+    margin-left: 304.5px;
+    Height: 422px;
+    position: relative;
+    z-index: 0;
+    transition: 0.3s;
+    top: 17px;
+}
+.blax_1 span
+{
+    opacity: 0;
+
+}
+.blax_1 img
+{
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+}
+.blax_1:hover 
+{
+    transform: scale(1.03);
+}
+.blax_1 span:hover
+{
+    position: absolute;
+    margin: 109px auto;
+    color: white;
+    font-size: 22px;
+    opacity: 1;
+}
+.blax_1 p
+{
+    position: absolute;
+    color: white;
+    opacity: 0;
+    width: 1000px;
+    top: 380px;
+    font-weight: bold;
+    font-size: 36px;
+    left: 357px;
+}
+.blax_1 p:hover
+{
+    position: absolute;
+    color: white;
+    height: 422px;
+    opacity: 1;
+    transition: 0.2s;
+    width: 930px;
+    top: 380px;
+
+    font-weight: bold;
+    font-size: 36px;
+    left: 357px;
+}
+.rec
+{
+    
+    position: absolute;
+    top: 0;
+    color: white;
+    font-size: 24px;
+    font-family: 'K2D';
+    left: 290px;
+    top: 612px;
+
+}
+.rec2
+{
+    
+    position: absolute;
+    top: 0;
+    color: white;
+    font-size: 24px;
+    font-family: 'K2D';
+    left: 290px;
+    top: 1095px;
+
+}
+.rec3
+{
+    
+    position: absolute;
+    top: 0;
+    color: white;
+    font-size: 24px;
+    font-family: 'K2D';
+    left: 290px;
+    top: 1577px;
+
+}
+.rec5
+{
+    
+        
+    position: absolute;
+    top: 0;
+    color: white;
+    font-size: 24px;
+    font-family: 'K2D';
+    left: 290px;
+    top: 2529px;
+}
+.rec6
+{
+    
+        
+    position: absolute;
+    top: 0;
+    color: white;
+    font-size: 24px;
+    font-family: 'K2D';
+    left: 290px;
+    top: 2999px;
+}
+.rec4
+{
+    
+    
+        position: absolute;
+        top: 0;
+        color: white;
+        font-size: 24px;
+        font-family: 'K2D';
+        left: 290px;
+        top: 2059px;
+    
+    
+}
+.blic19
+{
+    width: 224px;
+    height: 350px;
+    top: 2140px;
+    border-radius: 10px;
+    left: 302px;
+    position: absolute;
+    transition: 0.3s;
+}
+.blic23
+{
+    width: 224px;
+    height: 350px;
+    top: 2610px;
+    border-radius: 10px;
+    left: 1086px;
+    position: absolute;
+    transition: 0.3s;
+}
+.blic24
+{
+    width: 224px;
+    height: 350px;
+    position: absolute;
+    top: 2610px;
+    border-radius: 10px;
+    left: 824px;
+}
+.blic25
+{
+    position: absolute;
+    width: 238px;
+    transition: 0.3s;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 2610px;
+    left: 562px;
+}
+.blic26
+{
+    position: absolute;
+    width: 238px;
+    transition: 0.3s;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 2795px;
+    left: 562px;
+}
+.blic27
+{
+    position: absolute;
+    width: 238px;
+    transition: 0.3s;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 2795px;
+    left: 302px;
+}
+.blic28
+{
+    position: absolute;
+    width: 238px;
+    transition: 0.3s;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 2610px;
+    left: 302px;
+}
+
+.blic29
+{
+    position: absolute;
+    width: 238px;
+    transition: 0.3s;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 3080px;
+    left: 562px;
+}
+.blic30
+{
+    position: absolute;
+    width: 238px;
+    transition: 0.3s;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 3266px;
+    left: 562px;
+}
+.blic31
+{
+    position: absolute;
+    width: 238px;
+    transition: 0.3s;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 3080px;
+    left: 824px;
+}
+.blic32
+{
+    position: absolute;
+    width: 238px;
+    transition: 0.3s;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 3266px;
+    left: 824px;
+}
+.blic33
+{
+    position: absolute;
+    width: 238px;
+    transition: 0.3s;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 3080px;
+    left: 302px;
+}
+.blic34
+{
+    position: absolute;
+    width: 238px;
+    transition: 0.3s;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 3266px;
+    left: 302px;
+}
+.blic35
+{
+    position: absolute;
+    width: 238px;
+    transition: 0.3s;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 3080px;
+    left: 1086px;
+}
+.blic36
+{
+    position: absolute;
+    width: 238px;
+    transition: 0.3s;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 3266px;
+    left: 1086px;
+}
+.wrapper ion-icon 
+{
+    position: absolute;
+    color: white;
+    font-size: 19px;
+    margin-left: 200px;
+    top: 14px;
+}
+.blic19 img,
+.blic23 img,
+.blic24 img,
+.blic25 img,
+.blic26 img,
+.blic27 img,
+.blic28 img,
+.blic29 img,
+.blic30 img,
+.blic31 img,
+.blic32 img,
+.blic33 img,
+.blic34 img,
+.blic36 img,
+.blic35 img
+{
+    width: 100%;
+    transition: 0.3s;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.blic20
+{
+    width: 224px;
+    height: 350px;
+    top: 2140px;
+    border-radius: 10px;
+    left: 553px;
+    transition: 0.3s;
+    position: absolute;
+    transition: 0.3s;
+}
+.blic20 img
+{
+    width: 100%;
+    transition: 0.3s;
+    height: 100%;
+    border-radius: 10px;
+}
+.blic21
+{
+    width: 224px;
+    height: 350px;
+    top: 2140px;
+    border-radius: 10px;
+    left: 803px;
+    position: absolute;
+    transition: 0.3s;
+}
+.blic21 img
+{
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.blic22
+{
+    width: 224px;
+    height: 350px;
+    top: 2140px;
+    border-radius: 10px;
+    transition: 0.3s;
+    left: 1060px;
+    position: absolute;
+    transition: 0.3s;
+}
+.coc:hover,
+.user:hover
+{
+    color: red;
+    transform: scale(1.1);
+}
+.f
+{
+    position: fixed;
+width: 91px;
+height: 21px;
+left: 45px;
+top: 237px;
+transition: 0.3s;
+font-family: 'K2D';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+
+color: #FFFFFF;
+
+}
+.M:hover,
+.N:hover,
+.C:hover,
+.f:hover
+{
+ transform: scale(1.1);
+ color: red;
+}
+.M
+{
+    position: fixed;
+width: 66px;
+height: 21px;
+left: 45px;
+top: 459px;
+transition: 0.3s;
+font-family: 'K2D';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+
+color: #FFFFFF;
+}
+.N
+{
+    position: fixed;
+width: 66px;
+height: 21px;
+left: 45px;
+top: 385px;
+transition: 0.3s;
+font-family: 'K2D';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+
+color: #FFFFFF;
+}
+.C
+{
+    position: fixed;
+width: 94px;
+height: 21px;
+left: 45px;
+top: 311px;
+transition: 0.3s;
+font-family: 'K2D';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+
+color: #FFFFFF;
+}
+.blic22 img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.res
+{
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    height: 130px;
+    background: #141414;
+    left: 266px;
+}
+.blic img
+{
+    position: absolute;
+    transition: 0.3s;
+    width: 238px;
+    border-radius: 20px;
+    height: 362px;
+    top: 694px;
+    left: 307px;
+}
+
+    .blic7 img
+    {
+        position: absolute;
+        width: 238px;
+        transition: 0.3s;
+        border-radius: 20px;
+        height: 362px;
+        top: 1176px;
+        left: 307px;
+    } 
+    .blic8 img
+    {
+        position: absolute;
+        width: 238px;
+        transition: 0.3s;
+        border-radius: 20px;
+        height: 362px;
+        top: 1176px;
+        left: 1087px;
+    }
+    .blic9 img
+    {
+        position: absolute;
+        width: 238px;
+        transition: 0.3s;
+        height: 165px;
+        object-fit: cover;
+        border-radius: 20px;
+        top: 1176px;
+        left: 827px;
+    }
+    .blic10 img
+    {
+        position: absolute;
+        width: 238px;
+        height: 165px;
+        object-fit: cover;
+        border-radius: 20px;
+        top: 1373px;
+        transition: 0.3s;
+        left: 827px;
+    }
+    .blic11 img
+    {
+        position: absolute;
+        width: 238px;
+        transition: 0.3s;
+        height: 165px;
+        object-fit: cover;
+        border-radius: 20px;
+        top: 1373px;
+        left: 567px;
+    }
+    .blic12 img
+    {
+        position: absolute;
+        width: 238px;
+        height: 165px;
+        transition: 0.3s;
+        object-fit: cover;
+        border-radius: 20px;
+        top: 1176px;
+        left: 567px;
+    }
+    .blic13 img
+    {
+        position: absolute;
+        width: 238px;
+        border-radius: 20px;
+        height: 362px;
+        transition: 0.3s;
+        top: 1658px;
+        left: 302px;
+        
+    }
+    .blic14 img
+    {
+        position: absolute;
+        width: 238px;
+        height: 165px;
+        transition: 0.3s;
+        object-fit: cover;
+        border-radius: 20px;
+        top: 1658px;
+        left: 567px;
+    }
+    .blic15 img
+    {
+        position: absolute;
+        width: 238px;
+        transition: 0.3s;
+        height: 165px;
+        object-fit: cover;
+        border-radius: 20px;
+        top: 1856px;
+        left: 567px;
+    }
+    .blic16 img
+    {
+        position: absolute;
+        width: 238px;
+        transition: 0.3s;
+        border-radius: 20px;
+        height: 362px;
+        top: 1658px;
+        left: 824px;
+        
+    }
+    .blic17 img
+    {
+        position: absolute;
+        transition: 0.3s;
+        width: 238px;
+        border-radius: 20px;
+        height: 165px;
+        top: 1658px;
+        object-fit: cover;
+        left: 1086px;
+        
+    }
+    .blic18 img
+    {
+        position: absolute;
+        width: 238px;
+        height: 165px;
+        transition: 0.3s;
+        object-fit: cover;
+        border-radius: 20px;
+        top: 1856px;
+        left: 1086px;
+    }
+    .blic img:hover,
+    .blic2 img:hover,
+    .blic3 img:hover,
+    .blic4 img:hover,
+    .blic5 img:hover,
+    .blic6 img:hover,
+    .blic7 img:hover,
+    .blic8 img:hover,
+    .blic9 img:hover,
+    .blic10 img:hover,
+    .blic11 img:hover,
+    .blic12 img:hover,
+    .blic13 img:hover,
+    .blic14 img:hover,
+    .blic15 img:hover,
+    .blic16 img:hover,
+    .blic17 img:hover,
+    .blic18 img:hover,
+    .blic20 img:hover,
+    .blic21 img:hover,
+    .blic22 img:hover,
+    .blic23 img:hover,
+    .blic24 img:hover,
+    .blic25 img:hover,
+    .blic26 img:hover,
+    .blic27 img:hover,
+    .blic30 img:hover,
+    .blic31 img:hover,
+    .blic32 img:hover,
+    .blic33 img:hover,
+    .blic34 img:hover,
+    .blic35 img:hover,
+    .blic36 img:hover,
+    .blic29 img:hover,
+    .blic28 img:hover,
+    .blic19 img:hover
+    {
+        transform: scale(1.1);
+        box-shadow: 10px 10px 20px rgb(0 0 0);
+    }
+.blic2 img
+{
+    position: absolute;
+    width: 238px;
+    transition: 0.3s;
+    border-radius: 20px;
+    height: 362px;
+    top: 694px;
+    left: 567px;
+}
+.blic3 img
+{
+    position: absolute;
+    width: 238px;
+    transition: 0.3s;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 694px;
+    left: 827px;
+}
+.blic4 img
+{
+    position: absolute;
+    width: 238px;
+    height: 165px;
+    transition: 0.3s;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 891px;
+    left: 827px;
+}
+.blic5 img
+{
+    position: absolute;
+    width: 238px;
+    height: 165px;
+    transition: 0.3s;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 694px;
+    left: 1087px;
+}
+.blic6 img
+{
+    position: absolute;
+    width: 238px;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 891px;
+    transition: 0.3s;
+    left: 1087px;
+}
+.fon
+{
+    position: absolute;
+    width: 80.5%;
+    height: 617px;
+    z-index: -1;
+}
+.fon img
+{
+    position: absolute;
+    left: 265px;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+}
+.name p:first-letter {
+    color: red
+}
+.name p
+{
+    font-size: 32px;
+    position: absolute;
+    /* width: 223px; */
+    transition: 0.3s;
+    height: 42px;
+    font-family: 'K2D';
+    font-style: normal;
+    font-weight: 700;
+    left: 378px;
+    top: 169px;
+    color: white;
+}
+.redc
+{
+    border: 2px solid red;
+    width: 50px;
+    height: 20px;
+    border-radius: 5px;
+    left: 750px;
+    position: relative;
+    transition: 0.3s;
+    top: 46px;
+}
+.redc p
+{
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 100%;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 100;
+    display: grid;
+}
+.redc:hover
+{
+    transform: scale(1.2);
+}
+.name p:hover
+{
+    transform: scale(1.1);
+}
+.name_l p
+{
+    position: absolute;
+    width: 192px;
+    height: 20px;
+    left: 365px;
+    top: 215px;
+    font-family: 'K2D';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #ffffff;
+}
+.opis
+{
+    position: absolute;
+width: 425px;
+height: 105px;
+left: 357px;
+top: 269px;
+transition: 0.3s;
+font-family: 'K2D';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 21px;
+text-align: center;
+text-transform: capitalize;
+
+color: #FFFFFF;
+}
+.opis:hover
+{
+    transform: scale(1.1);
+}
+.year
+{
+    position: absolute;
+width: 142px;
+height: 42px;
+left: 400px;
+top: 129px;
+
+font-family: 'K2D';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 42px;
+/* identical to box height */
+
+text-align: center;
+text-transform: capitalize;
+
+color: #FFFFFF;
+}
+.resing
+{
+    position: absolute;
+width: 107px;
+height: 26px;
+left: 1035px;
+top: 143px;
+width: 316px;
+font-family: 'K2D';
+font-style: normal;
+font-weight: 800;
+font-size: 20px;
+line-height: 26px;
+/* identical to box height */
+
+text-transform: capitalize;
+
+color: #FFFFFF;
+
+}
+.revig
+{
+    
+position: absolute;
+left: 950px;
+top: 191px;
+width: 316px;
+transition: 0.3s;
+cursor: context-menu;
+font-family: 'K2D';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+width: 316px;
+line-height: 17px;
+text-transform: capitalize;
+
+color: #FF0000;
+}
+.revig h3
+{
+    color: white;
+    position: absolute;
+    left: 100px;
+    font-weight: 100;
+    font-size: 16px;
+}
+.revig:hover
+{
+    transform: scale(1.1);
+}
+.revis
+{
+    
+    position: absolute;
+    left: 950px;
+    top: 224px;
+    transition: 0.3s;
+    cursor: context-menu;
+    font-family: 'K2D';
+    font-style: normal;
+    width: 316px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 17px;
+    text-transform: capitalize;
+    color: #FF0000;
+}
+.revis h3
+{
+    color: white;
+    position: absolute;
+    left: 100px;
+    font-weight: 100;
+    font-size: 16px;
+}
+.revis:hover
+{
+    transform: scale(1.1);
+}
+#kinobd-iframe
+{
+    width: 100%;
+    height: 514px;
+    border: 0;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+.reviq
+{
+    
+    position: absolute;
+    left: 950px;
+    top: 259px;
+    transition: 0.3s;
+    cursor: context-menu;
+    font-family: 'K2D';
+    font-style: normal;
+    width: 316px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 17px;
+    text-transform: capitalize;
+    color: #FF0000;
+}
+.reviq h3
+{
+    color: white;
+    position: absolute;
+    left: 100px;
+    font-weight: 100;
+    font-size: 16px;
+}
+.reviq:hover
+{
+    transform: scale(1.1);
+}
+.reviw
+{
+    position: absolute;
+    left: 950px;
+    top: 294px;
+    transition: 0.3s;
+    width: 396px;
+    cursor: context-menu;
+    font-family: 'K2D';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 17px;
+    text-transform: capitalize;
+    color: #FF0000;
+}
+.reviw h3
+{
+    color: white;
+    position: absolute;
+    left: 100px;
+    font-weight: 100;
+    font-size: 16px;
+}
+.reviw:hover
+{
+    transform: scale(1.1);
+}
+.revie
+{
+    position: absolute;
+    left: 950px;
+    top: 329px;
+    transition: 0.3s;
+    width: 396px;
+    cursor: context-menu;
+    font-family: 'K2D';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 17px;
+    text-transform: capitalize;
+    color: #FF0000;
+}
+.revie h3
+{
+    color: white;
+    position: absolute;
+    left: 100px;
+    font-weight: 100;
+    font-size: 16px;
+}
+.revie:hover
+{
+    transform: scale(1.1);
+}
+.bob
+{
+    width: 200px;
+    border: 2px solid white;
+    POSITION: ABSOLUTE;
+    transform: rotate(90deg);
+    top: 496px;
+    left: 1165px;
+}
+.bob2
+{
+    width: 300px;
+    border: 2px solid white;
+    POSITION: ABSOLUTE;
+    top: 596px;
+    left: 961px;
+}
+.prew img {
+    width: 300px;
+    left: 952px;
+    position: absolute;
+    top: 385px;
+    border-radius: 10px;
+    opacity: 1;
+}

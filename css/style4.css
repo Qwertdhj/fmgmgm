@@ -1,0 +1,143 @@
+@media (min-width: 375px) {
+    .prew img {
+        width: 100%;
+        left: 0;
+        position: absolute;
+        top: 85px;
+        border-radius: 0 0 10px 10px;
+        opacity: 1;
+    }
+    .play {
+        font-size: 64px;
+        border: none;
+        background: none;
+        color: red;
+        left: 161px;
+        transition: 0.3s;
+        z-index: 99;
+        top: 177px;
+        position: absolute;
+    }
+    .opis {
+        position: absolute;
+        width: 309px;
+        height: 233px;
+        left: 31px;
+        top: 440px;
+        transition: 0.3s;
+        font-family: 'K2D';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #FFFFFF;
+    }
+    .redc {
+        border: 2px solid red;
+        width: 50px;
+        height: 20px;
+        border-radius: 5px;
+        left: 229px;
+        position: relative;
+        transition: 0.3s;
+        top: 227px;
+    }
+    .redc p
+    {
+        font-size: 16px;
+        position: absolute;
+        /* width: 223px; */
+        transition: 0.3s;
+        height: 42px;
+        font-family: 'K2D';
+        font-style: normal;
+        font-weight: 700;
+        left: 1px;
+        top: 0;
+        color: white;
+    }
+    .name_l p {
+        position: absolute;
+        width: 192px;
+        height: 20px;
+        left: 86px;
+        top: 359px;
+        font-family: 'K2D';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+        text-align: center;
+        color: #ffffff;
+    }
+    .year {
+        position: absolute;
+        width: 142px;
+        height: 42px;
+        left: 124px;
+        top: 385px;
+        font-family: 'K2D';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 42px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #FFFFFF;
+    }
+    .wrapper {
+        border-radius: 5px;
+        box-shadow: 0px 1px 5px 3px rgb(0 0 0 / 15%);
+        position: fixed;
+        background: #0E0E0E;
+        z-index: 9;
+        width: 49%;
+        left: 15px;
+        top: 15px;
+    }
+    .user
+    {
+        left: 90%;
+        z-index: 8;
+    }
+    .coc
+    {
+        left: 75%;
+        z-index: 8;
+    }
+    #kinobd-iframe
+    {
+        width: 329px;
+    }
+    .f,
+    .C,
+    .bob2,
+    .bob,
+    .revie,
+    .reviw,
+    .reviq,
+    .revis,
+    .revig,
+    .resing,
+    .N,
+    .M,
+    .line
+    {
+        display: none;
+    }
+    .name p {
+        font-size: 22px;
+        position: absolute;
+        /* width: 223px; */
+        transition: 0.3s;
+        height: 42px;
+        font-family: 'K2D';
+        font-style: normal;
+        font-weight: 700;
+        left: 53px;
+        top: 334px;
+        color: white;
+    }
+}
